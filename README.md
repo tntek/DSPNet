@@ -2,13 +2,13 @@
 
 **Abstract**:
 
-Few-shot Semantic Segmentation (FSS) has emerged as a promising approach for medical imaging segmentation, aiming at employing one or several support images to predict the same type organ in query data. As dominant FSS methods, the prototypical scheme 
-suffers from a fundamental limitation: The pooling-based prototypes are prone to losing local details. The complicated and diverse details in medical images amplify this problem. Unlike conventional incremental solution that constructs new prototypes to 
-capture more details, this paper introduces a novel Detail Self-refined Prototype Network (DSPNet). Our core idea is enhancing the prototypes’ ability to model details by channel-wise detail self-refining. To this end, we provide two new attention-like 
-designs: Foreground Semantic Prototype Attention (FSPA) and Background Channel-structural Multi-head Attention (BCMA). Specifically, for foreground class prototype, FSPA fuses the cluster-based detail prototypes as the enhanced one in a channel-wise 
-manner. To address complicated background,BCMA injects channel-structural constraint, named neighbour channel-aware regulation, into the multi-head channel attention,exploiting a local-global adjustment mechanism. Elements of each background detail 
-prototype are individually refreshed by different heads in BCMA. Extensive experiments on two challenging medical benchmarks demonstrate the superiority of DSPNet over previous state-of-the-art FSS methods.
-
+As dominant Few-shot Semantic Segmentation (FSS) methods, the prototypical scheme suffers from a fundamental limitation: The pooling-based prototypes are prone to losing local details. The complicated and diverse details in medical
+images amplify this problem considerably. Unlike conventional incremental solution that constructs new prototypes to capture more details, this paper introduces a novel Detail Self-refined Prototype Network (DSPNet). Our core idea is 
+enhancing theprototypes’ ability to model details via detail self-refining. To this end, we propose two new attention-like designs. In foreground semantic prototype attention module, to construct global semantics while maintaining the
+captured detail semantics, we fuse cluster-based detail prototypes as a single class prototype in a channel-wise weighting fashion. In background channel-structural multi-head attention module, considering that the complicated background
+often has no apparent semantic relation in the spatial dimensions,we integrate each background detail prototype’s channel structural information for its self-enhancement. Specifically, we introduce a neighbour channel-aware regulation
+into the multi-head channel attention, exploiting a local-global adjustment mechanism.Elements of each detail prototype are individually refreshed by different heads in BCMA. Extensive experiments on two challenging medical benchmarks
+demonstrate the superiority of DSPNet over previous state-of-the-art FSS methods.
 **NOTE: We are actively updating this repository**
 
 If you find this code base useful, please cite our paper. Thanks!
